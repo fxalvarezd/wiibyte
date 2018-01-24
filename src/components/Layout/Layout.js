@@ -5,7 +5,7 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles'
 // external-global styles must be imported in your JS.
 import normalizeCss from 'normalize.css'
 import s from './Layout.css'
-import MainMenu from '../MainMenu'
+import Navigation from '../Navigation'
 
 class Layout extends React.Component {
   static propTypes = {
@@ -14,9 +14,11 @@ class Layout extends React.Component {
 
   render() {
     return (
-      <div>
-        {this.props.children}
-        <MainMenu />
+      <div className={s.main}>
+        <div>
+          {this.props.children}
+        </div>
+        <Navigation />
       </div>
     )
   }

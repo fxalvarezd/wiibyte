@@ -1,0 +1,39 @@
+@import '../../styles/variables.css';
+
+.navigation {
+  background: #000;
+  color: #e0e0e0;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  text-decoration: none;
+}
+
+.menuItem {
+  cursor: pointer;
+  display: inline-block;
+  padding: 40px 25px;
+  position: relative;
+}
+
+.menuItem::before {
+  background-color: #5b259e;
+  bottom: 0;
+  content: '';
+  height: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  transition: 0.2s;
+}
+
+.menuItem:hover::before {
+  height: 3px;
+}
