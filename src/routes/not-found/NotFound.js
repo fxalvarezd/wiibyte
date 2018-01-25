@@ -1,7 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import withStyles from 'isomorphic-style-loader/lib/withStyles'
-import s from './NotFound.css'
+import React from 'react';
+import PropTypes from 'prop-types';
+import withStyles from 'isomorphic-style-loader/lib/withStyles';
+import s from './NotFound.css';
 
 class NotFound extends React.Component {
   static propTypes = {
@@ -16,8 +16,8 @@ class NotFound extends React.Component {
           <p>Sorry, the page you were trying to view does not exist.</p>
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default withStyles(s)(NotFound)
+export default withStyles(s)(NotFound);

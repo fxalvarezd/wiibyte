@@ -1,5 +1,5 @@
-import DataType from 'sequelize'
-import Model from '../sequelize'
+import DataType from 'sequelize';
+import Model from '../sequelize';
 
 const User = Model.define(
   'User',
@@ -23,6 +23,6 @@ const User = Model.define(
   {
     indexes: [{ fields: ['email'] }],
   },
-)
+);
 
-export default User
+export default User;

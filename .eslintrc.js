@@ -23,7 +23,7 @@ module.exports = {
   },
 
   rules: {
-    semi: ['error', 'never'],
+    // semi: ['error', 'never'],
 
     // Forbid the use of extraneous packages
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-extraneous-dependencies.md
@@ -79,7 +79,7 @@ module.exports = {
 
     // ESLint plugin for prettier formatting
     // https://github.com/prettier/eslint-plugin-prettier
-    // 'prettier/prettier': 'error',
+    'prettier/prettier': 'error',
   },
 
   settings: {
@@ -91,4 +91,4 @@ module.exports = {
       },
     },
   },
-}
+};

@@ -1,4 +1,5 @@
 @import '../../styles/variables.css';
+@import '../../styles/reset.css';
 @import '../../styles/base.css';
 
 /*
@@ -6,6 +7,10 @@
  * If you import external CSS file from your internal CSS
  * then it will be inlined and processed with CSS modules.
  */
+
+.layout {
+  background: #000;
+}
 
 .main {
   display: flex;

@@ -1,39 +1,82 @@
 @import '../../styles/variables.css';
 
 .navigation {
-  background: #000;
-  color: #e0e0e0;
+  background: rgba(255, 255, 255, 0.1);
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
 }
 
 .container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  text-align: center;
+
+  @media (--large) {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: inherit;
+  }
 }
 
 .logo {
-  text-decoration: none;
+  cursor: pointer;
+  padding: 20px 25px 10px;
+
+  @media (--large) {
+    padding: 20px 25px;
+  }
 }
 
 .menuItem {
   cursor: pointer;
   display: inline-block;
-  padding: 40px 25px;
+  padding: 15px;
   position: relative;
+
+  @media (--large) {
+    padding: 40px 25px;
+  }
+
+  &::before {
+    background-color: var(--color-brand-purple);
+    bottom: 0;
+    content: '';
+    height: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    transition: 0.2s;
+  }
+
+  &:hover::before {
+    height: 3px;
+  }
 }
 
-.menuItem::before {
-  background-color: #5b259e;
-  bottom: 0;
-  content: '';
-  height: 0;
-  left: 0;
-  position: absolute;
-  right: 0;
-  transition: 0.2s;
+.social {
+  padding: 20px 25px;
 }
 
-.menuItem:hover::before {
-  height: 3px;
+.socialItem {
+  display: inline-block;
+  margin-left: 8px;
+}
+
+.socialIcon {
+  background-color: #3d3d3d;
+  border-radius: 50%;
+  color: #000;
+  font-size: 16px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  transition: 0.3s ease-in-out;
+  width: 28px;
+
+  &:hover {
+    background-color: var(--color-brand-purple);
+    color: #fff;
+  }
 }

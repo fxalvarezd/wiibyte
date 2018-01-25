@@ -1,7 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import serialize from 'serialize-javascript'
-import config from '../config'
+import React from 'react';
+import PropTypes from 'prop-types';
+import serialize from 'serialize-javascript';
+import config from '../config';
 
 /* eslint-disable react/no-danger */
 
@@ -26,7 +26,7 @@ class Html extends React.Component {
   };
 
   render() {
-    const { title, description, styles, scripts, app, children } = this.props
+    const { title, description, styles, scripts, app, children } = this.props;
     return (
       <html className="no-js" lang="en">
         <head>
@@ -38,7 +38,16 @@ class Html extends React.Component {
           {scripts.map(script => (
             <link key={script} rel="preload" href={script} as="script" />
           ))}
-          <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+          <link
+            href="https://fonts.googleapis.com/css?family=Open+Sans"
+            rel="stylesheet"
+          />
+
+          <link
+            href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+            rel="stylesheet"
+          />
+
           <link rel="apple-touch-icon" href="apple-touch-icon.png" />
           {styles.map(style => (
             <style
@@ -74,8 +83,8 @@ class Html extends React.Component {
           )}
         </body>
       </html>
-    )
+    );
   }
 }
 
-export default Html
+export default Html;
