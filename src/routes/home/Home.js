@@ -1,24 +1,54 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
+import { Carousel } from 'react-responsive-carousel';
+import cx from 'classnames';
+import Navigation from '../../components/Navigation/Navigation';
+import homeVideo from '../../assets/home-video.mp4';
 import s from './Home.css';
 
 class Home extends React.Component {
-  static propTypes = {
-    xxx: PropTypes.string,
+  state = {
+    selectedPage: 0,
   };
 
-  static defaultProps = {
-    xxx: null,
+  setSelectedPage = () => {
+    // TODO
   };
 
   render() {
     return (
-      <div className={s.root}>
-        <div className={s.container}>
-          <h1>WiiByte</h1>
-          <p>Hey There!! {this.props.xxx}</p>
+      <div>
+        <div className={s.home}>
+          <Carousel
+            showStatus={false}
+            showIndicators={false}
+            showThumbs={false}
+            onChange={this.setSelectedPage}
+          >
+            <div className={cx(s.slide)}>
+              <div className={s.videoContainer}>
+                {/* eslint-disable */}
+                <video autoPlay loop="true" width="1280" height="720" muted>
+                  <source type="video/mp4" src={homeVideo} />
+                </video>
+                { /* eslint-enable */ }
+              </div>
+
+              <div className={s.homeContent}>
+                <h1>WiiByte</h1>
+              </div>
+            </div>
+
+            <div className={cx(s.slide, s.two)} />
+
+            <div className={cx(s.slide, s.three)} />
+          </Carousel>
         </div>
+
+        <Navigation
+          selectedPage={this.state.selectedPage}
+          onMenuClick={this.setSelectedPage}
+        />
       </div>
     );
   }
