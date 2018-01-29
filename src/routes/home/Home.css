@@ -39,6 +39,10 @@
   z-index: 2;
 }
 
+.tagline {
+  font-size: 44px;
+}
+
 .two {
   background: blue;
 }

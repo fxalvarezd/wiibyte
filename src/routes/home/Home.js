@@ -11,8 +11,12 @@ class Home extends React.Component {
     selectedPage: 0,
   };
 
-  setSelectedPage = () => {
-    // TODO
+  setSelectedPage = index => {
+    if (this.state.selectedPage !== index) {
+      this.setState({
+        selectedPage: index,
+      });
+    }
   };
 
   render() {
@@ -24,6 +28,7 @@ class Home extends React.Component {
             showIndicators={false}
             showThumbs={false}
             onChange={this.setSelectedPage}
+            selectedItem={this.state.selectedPage}
           >
             <div className={cx(s.slide)}>
               <div className={s.videoContainer}>
@@ -36,6 +41,8 @@ class Home extends React.Component {
 
               <div className={s.homeContent}>
                 <h1>WiiByte</h1>
+                <p className={s.tagline}>Lorem Ipsum</p>
+                <p className={s.tagline}>Dolor sit Amet</p>
               </div>
             </div>
 
