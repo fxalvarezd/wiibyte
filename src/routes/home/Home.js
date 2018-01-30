@@ -1,9 +1,10 @@
 import React from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import { Carousel } from 'react-responsive-carousel';
-import cx from 'classnames';
 import Navigation from '../../components/Navigation/Navigation';
-import homeVideo from '../../assets/home-video.mp4';
+import HomeSlide from '../../components/Home';
+import AboutSlide from '../../components/About';
+import ContactSlide from '../../components/Contact';
 import s from './Home.css';
 
 class Home extends React.Component {
@@ -21,7 +22,7 @@ class Home extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className={s.main}>
         <div className={s.home}>
           <Carousel
             showStatus={false}
@@ -30,25 +31,9 @@ class Home extends React.Component {
             onChange={this.setSelectedPage}
             selectedItem={this.state.selectedPage}
           >
-            <div className={cx(s.slide)}>
-              <div className={s.videoContainer}>
-                {/* eslint-disable */}
-                <video autoPlay loop="true" width="1280" height="720" muted>
-                  <source type="video/mp4" src={homeVideo} />
-                </video>
-                { /* eslint-enable */ }
-              </div>
-
-              <div className={s.homeContent}>
-                <h1>WiiByte</h1>
-                <p className={s.tagline}>Lorem Ipsum</p>
-                <p className={s.tagline}>Dolor sit Amet</p>
-              </div>
-            </div>
-
-            <div className={cx(s.slide, s.two)} />
-
-            <div className={cx(s.slide, s.three)} />
+            <HomeSlide />
+            <AboutSlide />
+            <ContactSlide />
           </Carousel>
         </div>
 
