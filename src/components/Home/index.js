@@ -1,6 +1,7 @@
 import React from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import homeVideo from '../../assets/home-video.mp4';
+import logo from '../../assets/logo.png';
 import s from './styles.css';
 
 class HomeSlide extends React.Component {
@@ -16,9 +17,9 @@ class HomeSlide extends React.Component {
         </div>
 
         <div className={s.homeContent}>
-          <h1>WiiByte</h1>
-          <p className={s.tagline}>Lorem Ipsum</p>
-          <p className={s.tagline}>Dolor sit Amet</p>
+          <img className={s.logo} src={logo} alt="WiiByte" />
+          <p className={s.tagline}>YOUR NEEDS.</p>
+          <p className={s.tagline}>OUR PASSION.</p>
         </div>
       </div>
     );

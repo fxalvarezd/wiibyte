@@ -26,10 +26,26 @@
 }
 
 .homeContent {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  box-shadow: 0 0 100px #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  justify-content: center;
   position: relative;
+  width: 400px;
   z-index: 2;
 }
 
+.logo {
+  margin-bottom: 15px;
+  width: 100px !important;
+}
+
 .tagline {
-  font-size: 44px;
+  font-family: var(--font-family-tagline);
+  font-size: 32px;
 }

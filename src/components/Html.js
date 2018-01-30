@@ -39,7 +39,7 @@ class Html extends React.Component {
             <link key={script} rel="preload" href={script} as="script" />
           ))}
           <link
-            href="https://fonts.googleapis.com/css?family=Open+Sans"
+            href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Righteous"
             rel="stylesheet"
           />
 
