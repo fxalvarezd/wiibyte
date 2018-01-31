@@ -22,7 +22,7 @@
 
 .logo {
   cursor: pointer;
-  padding: 20px 25px 10px;
+  padding: 20px 25px 0;
 
   @media (--large) {
     padding: 20px 25px;
@@ -32,11 +32,13 @@
 .menuItem {
   cursor: pointer;
   display: inline-block;
-  padding: 15px;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 25px;
   position: relative;
 
   @media (--large) {
-    padding: 40px 25px;
+    padding: 40px;
   }
 
   &::before {
