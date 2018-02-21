@@ -1,5 +1,5 @@
 import React from 'react';
-import Home from './Home';
+import Main from './Main';
 import Layout from '../../components/Layout';
 
 function action() {
@@ -7,7 +7,7 @@ function action() {
     title: 'Home',
     component: (
       <Layout>
-        <Home />
+        <Main />
       </Layout>
     ),
   };

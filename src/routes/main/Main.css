@@ -2,16 +2,19 @@
 
 :global {
   .homeSlide {
+    /*
     align-items: center;
     display: flex;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 100%;
     padding-bottom: 200px;
     width: 100%;
+    */
   }
 
   .carousel .slide {
     background: none;
+    height: 100vh;
   }
 }
 

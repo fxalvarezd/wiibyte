@@ -5,9 +5,9 @@ import Navigation from '../../components/Navigation/Navigation';
 import HomeSlide from '../../components/Home';
 import AboutSlide from '../../components/About';
 import ContactSlide from '../../components/Contact';
-import s from './Home.css';
+import s from './Main.css';
 
-class Home extends React.Component {
+class Main extends React.Component {
   state = {
     selectedPage: 0,
   };
@@ -46,4 +46,4 @@ class Home extends React.Component {
   }
 }
 
-export default withStyles(s)(Home);
+export default withStyles(s)(Main);

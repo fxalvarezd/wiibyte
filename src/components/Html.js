@@ -49,11 +49,12 @@ class Html extends React.Component {
           />
 
           <link
-            href="http://react-responsive-carousel.js.org/carousel.min.css"
             rel="stylesheet"
+            href="http://react-responsive-carousel.js.org/styles/carousel.min.css"
           />
 
           <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
           {styles.map(style => (
             <style
               key={style.id}
